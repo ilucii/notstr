@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script type="text/javascript">
+(function titleScroller(text) {
+    document.title = text;
+    setTimeout(function () {
+        titleScroller(text.substr(1) + text.substr(0, 1));
+    }, 500);
+}("// tiramisu // "));
+</script> 
+<link rel="icon" href="https://tiramisuweb.neocities.org/stick.png">
+
+  <meta charset="UTF-8">
+  
+  </head>
+  <body>
+
+        <div id="container"><div id="topBar"><a href="todo">grand opening</a><a href="secret">!!!!!!!</a></div><div id="header" style="height: 105px;"></div>
+            <div id="headerArea">
+                
+                
+            <nav id="navbar" style="margin-bottom: 0px;"><ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="test">Expiremental features</a></li>
+              </ul></nav></div>
+
+            <div id="flex">
+                
+                <main>
+                    <h1>tiramisu's webpage</h1>
+                    <p><strong>stuff i do</strong></p>
+                    <p>GUI development</p>
+                    <p>CS:GO HvH</p>
+                    <p>minecraft cheating</p>
+
+
+                </main>
+            <aside id="rightSidebar"><h2>updates</h2>
+            <div class="box">
+                <p>Newest media:</p>
+                <ul style="padding-left:10px;">
+                    <li><a href="https://www.youtube.com/watch?v=W9IPQK1x_Cg" target="_blank">Neverlose: Using manticore.cc and necron.lua to 1tap ppls!!</a></li>
+                </ul>
+            </div>
+            <h2>Hi there!</h2>
+            <p>Do you have a suggestion for a feature? Some criticism about the website or something that confused you? Let me know! tiramisu#0001</p>
+            <h3>Cheating sites/Trusted Cheats</h3>
+            <ul>
+                <li><a href="https://fatality.win" target="_blank">Fatality</a>
+                </li><li><a href="https://primordial.dev" target="_blank">Primordial</a></li>
+                <li><a href="https://gamesense.pub" target="_blank">Gamesense</a></li>
+                <li><a href="https://neverlose.cc" target="_blank">Neverlose</a></li>
+                <li><a href="https://rifk7.com/" target="_blank">Rifk7</a></li>
+            </ul></aside></div>
+        <footer id="footer" style="margin-top: 0px;">
+        <p> made with love by tiramisu</p>
+        </footer></div>
+        <!-- THIS IS THE CSS !-->
+        <style>
+            /* user styles */
+
+            /* styles are what change the color and sizes of stuff on your site. */
+
+            /* these are variables that are being used in the code
+    these tended to confuse some people, so I only kept 
+    the images as variables */
+
+            :root {
+                --header-image: url('https://tiramisuweb.neocities.org/stick.png');
+                --body-bg-image: url('https://tiramisuweb.neocities.org/raindrops.gif');
+
+                /* colors */
+                --content: #43256E;
+            }
+
+            /* if you have the URL of a font, you can set it below */
+            /* feel free to delete this if it's not your vibe */
+
+            /* this seems like a lot for just one font and I would have to agree 
+    but I wanted to include an example of how to include a custom font.
+    If you download a font file you can upload it onto your Neocities
+    and then link it! Many fonts have separate files for each style
+    (bold, italic, etc. T_T) which is why there are so many!
+    
+    */
+
+            @font-face {
+                font-family: Nunito;
+                src: url('https://sadhost.neocities.org/fonts/Nunito-Regular.ttf');
+            }
+
+            @font-face {
+                font-family: Nunito;
+                src: url('https://tiramisuweb.neocities.org/fonts/Author-Medium.ttf');
+                font-weight: bold;
+            }
+
+            @font-face {
+                font-family: Nunito;
+                src: url('https://sadhost.neocities.org/fonts/Nunito-Italic.ttf');
+                font-style: italic;
+            }
+
+            @font-face {
+                font-family: Nunito;
+                src: url('https://sadhost.neocities.org/fonts/Nunito-BoldItalic.ttf');
+                font-style: italic;
+                font-weight: bold;
+            }
+
+            body {
+                font-family: 'Nunito', sans-serif;
+                margin: 0;
+                background-color: #2F2F2F;
+                /* you can delete the line below if you'd prefer to not use an image */
+                background-size: 65px;
+                color: #fceaff;
+                background-image: var(--body-bg-image);
+            }
+
+            * {
+                box-sizing: border-box;
+            }
+
+            /* below this line is CSS for the layout */
+
+            /* this is a CSS comment
+    to uncomment a line of CSS, remove the * and the /
+    before and after the text */
+
+
+            /* the "container" is what wraps your entire website */
+            /* if you want something (like the header) to be Wider than
+    the other elements, you will need to move that div outside
+    of the container */
+            #container {
+                max-width: 900px;
+                /* this is the width of your layout! */
+                /* if you change the above value, scroll to the bottom
+      and change the media query according to the comment! */
+                margin: 0 auto;
+                /* this centers the entire page */
+            }
+
+            /* the area below is for all links on your page
+    EXCEPT for the navigation */
+            #container a {
+                color: #ED64F5;
+                font-weight: bold;
+                /* if you want to remove the underline
+      you can add a line below here that says:
+      text-decoration:none; */
+            }
+
+            /* navigation section!! */
+            #navbar {
+                height: 40px;
+                background-color: #1C1C1C;
+                /* navbar color */
+                width: 100%;
+            }
+
+            #navbar ul {
+                display: flex;
+                padding: 0;
+                margin: 0;
+                list-style-type: none;
+                justify-content: space-evenly;
+            }
+
+            #navbar li {
+                padding-top: 10px;
+            }
+
+            /* navigation links*/
+            #navbar li a {
+                color: #b49999;
+                /* navbar text color */
+                font-weight: 800;
+                text-decoration: none;
+                /* this removes the underline */
+            }
+
+            /* navigation link when a link is hovered over */
+            #navbar li a:hover {
+                color: #856F6F;
+                text-decoration: underline;
+            }
+
+            #flex {
+                display: flex;
+            }
+
+            /* this colors BOTH sidebars
+    if you want to style them separately,
+    create styles for #leftSidebar and #rightSidebar */
+            aside {
+                background-color: #434343;
+                width: 200px;
+                padding: 20px;
+                font-size: smaller;
+                /* this makes the sidebar text slightly smaller */
+            }
+
+
+            /* this is the color of the main content area,
+    between the sidebars! */
+            main {
+                background-color: #2F2F2F;
+                flex: 1;
+                padding: 20px;
+                order: 2;
+            }
+
+            /* what's this "order" stuff about??
+    allow me to explain!
+    if you're using both sidebars, the "order" value
+    tells the CSS the order in which to display them.
+    left sidebar is 1, content is 2, and right sidebar is 3! */
+
+            */ #leftSidebar {
+                order: 1;
+            }
+
+            #rightSidebar {
+                order: 3;
+            }
+
+            footer {
+                background-color: #1C1C1C;
+                /* background color for footer */
+                width: 100%;
+                height: 40px;
+                padding: 10px;
+                text-align: center;
+                /* this centers the footer text */
+            }
+
+            h1,
+            h2,
+            h3 {
+                color: #ED64F5;
+            }
+
+            h1 {
+                font-size: 25px;
+            }
+
+            strong {
+                /* this styles bold text */
+                color: #ED64F5;
+            }
+
+            /* this is just a cool box, it's the darker colored one */
+            .box {
+                background-color: #1C1C1C;
+                border: 1px solid #ED64F5;
+                padding: 10px;
+            }
+
+            /* CSS for extras */
+
+            #topBar {
+                width: 100%;
+                height: 30px;
+                padding: 10px;
+                font-size: smaller;
+                background-color: #1C1C1C;
+            }
+
+
+            /* BELOW THIS POINT IS MEDIA QUERY */
+
+            /* so you wanna change the width of your page? 
+    by default, the container width is 900px.
+    in order to keep things responsive, take your new height,
+    and then subtrack it by 100. use this new number as the 
+    "max-width" value below
+    */
+
+            @media only screen and (max-width: 800px) {
+                #flex {
+                    flex-wrap: wrap;
+                }
+
+                aside {
+                    width: 100%;
+                }
+
+                /* the order of the items is adjusted here for responsiveness!
+      since the sidebars would be too small on a mobile device.
+      feel free to play around with the order!
+      */
+                main {
+                    order: 1;
+                }
+
+                #leftSidebar {
+                    order: 2;
+                }
+
+                #rightSidebar {
+                    order: 3;
+                }
+
+                #navbar ul {
+                    flex-wrap: wrap;
+                }
+            }
+        </style>
+
+    
+  </body>
+</html>
